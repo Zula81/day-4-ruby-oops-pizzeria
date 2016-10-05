@@ -15,6 +15,7 @@ class Waiter
     when 1
       p "Top! Ik ga meteen de kaart voor jullie halen!"
       list_menu
+      order_food(gets.chomp.to_i)
     when 2
       p "Peccato! Hopelijk tot een volgende keer. Buongiorno!"
     else
@@ -22,14 +23,20 @@ class Waiter
     end
   end
 
-  def initialize(menu)
+  def initialize(menu, kitchen)
     @menu = menu
+    @kitchen = kitchen
   end
 
   def list_menu
-    @menu.contents.each do |dish|
-      p "#{dish.name}"
+    @menu.contents.each_with_index do |dish, index|
+      p "#{index}. #{dish.name}"
     end
+  end
+
+  def order_food(choice)
+        dish = @menu.contents[choice]
+      @kitchen.order(dish)
   end
 
 end
