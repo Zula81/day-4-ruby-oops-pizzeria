@@ -1,4 +1,12 @@
+require './kitchen'
+
 class Waiter
+
+  def initialize(menu, kitchen)
+    @menu = menu
+    @kitchen = kitchen
+  end
+
   def greet_guest
     p "Buongiorno! Benvenuti nel nostro ristorante! "
   end
@@ -21,11 +29,6 @@ class Waiter
     else
       p "Scuse! Ik heb niet helemaal begrepen denk ik?"
     end
-  end
-
-  def initialize(menu, kitchen)
-    @menu = menu
-    @kitchen = kitchen
   end
 
   def list_menu
