@@ -11,8 +11,7 @@ class Waiter
   end
 
   def take_order(order_number)
-
-  case(order_number)
+    case order_number
     when 1
       p "Top! Ik ga meteen de kaart voor jullie halen!"
     when 2
