@@ -14,10 +14,22 @@ class Waiter
     case order_number
     when 1
       p "Top! Ik ga meteen de kaart voor jullie halen!"
+      list_menu
     when 2
       p "Peccato! Hopelijk tot een volgende keer. Buongiorno!"
     else
       p "Scuse! Ik heb niet helemaal begrepen denk ik?"
+    end
   end
- end
+
+  def initialize(menu)
+    @menu = menu
+  end
+
+  def list_menu
+    @menu.contents.each do |dish|
+      p "#{dish.name}"
+    end
+  end
+
 end
