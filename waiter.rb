@@ -1,6 +1,6 @@
 class Waiter
   def greet_guest
-    print "Buongiorno! Benvenuti nel nostro ristorante! "
+    p "Buongiorno! Benvenuti nel nostro ristorante! "
   end
 
   def serve_guest
@@ -12,13 +12,13 @@ class Waiter
 
   def take_order(order_number)
 
-case(order_number)
+  case(order_number)
     when 1
-      print "Top! Ik ga meteen de kaart voor jullie halen!"
+      p "Top! Ik ga meteen de kaart voor jullie halen!"
     when 2
-      print "Peccato! Hopelijk tot een volgende keer. Buongiorno!"
+      p "Peccato! Hopelijk tot een volgende keer. Buongiorno!"
     else
-      print "Scuse! Ik heb niet helemaal begrepen denk ik?"
+      p "Scuse! Ik heb niet helemaal begrepen denk ik?"
   end
  end
- end
+end
